@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="wrapper">
+
+    <div class="result-form">
+        <h1>Submitted Info</h1>
+        <div class="result-inputs">
+            <p id="result-margin">Your Name: {{ session['username'] }}</p>
+            <p id="result-margin">Your Location: {{ session['userlocation'] }}</p>
+            <p id="result-margin">Favorite Language: {{ session['userlanguage'] }}</p>
+            <p id="result-margin">Comments: {{ session['usercomments'] }}</p>
+
+            <br>
+            <a href="/clear"><button class="back-button dabbutton">Back</button></a>
+        </div>
+    </div>
+</div>

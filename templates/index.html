@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="fill-form">
+            <h1>Dojo Survey</h1>
+            <form action='/users' method='post'>
+                <label for='yourname'>Your Name:</label>
+                <p><input type='text' name='name' class="box-size bg-white bottom-margin"></p>
+
+                <label for='location' class="input-space">Dojo Location:</label>
+                <p></p><select name="location" class="box-size bottom-margin">
+                    <option value="-- Select A Location --">-- Select A Location --</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Honolulu">Honolulu</option>
+                    <option value="Miami">Miami</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select></p>
+
+                <label for='language' class="input-space">Favorite Language:</label>
+                <p></p><select name="language" class="box-size bottom-margin">
+                    <option value="-- Select A Language --">-- Select A Language --</option>
+                    <option value="HTML">HTML</option>
+                    <option value="Python">Python</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                </select></p>
+
+                <label for='comments' class="input-space">Comment (optional):</label>
+                <p><textarea name='comments' class="com-box bg-white"></textarea></p>
+                
+                <span><input type='submit' value='Submit' class="submit-button dabbutton"></span>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
